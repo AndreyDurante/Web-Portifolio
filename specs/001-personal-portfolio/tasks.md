@@ -152,7 +152,7 @@ description: "Dependency-ordered implementation tasks for the personal portfolio
 - [X] T046 Update `specs/001-personal-portfolio/quickstart.md` with implementation-specific commands and manual checks for direct detail-route refresh, locale/theme persistence, narrow/wide layouts, reduced motion, safe Markdown rendering, and Vercel preview behavior.
 - [X] T047 Run `npm run test`, `npm run lint`, and `npm run build`; resolve failures in the affected `tests/`, `src/`, `package.json`, or `vite.config.js` files before merge.
 - [ ] T048 Run Lighthouse in mobile mode on a Vercel preview and meet Performance >= 80 and Accessibility >= 90; correct relevant UI/assets in `src/` and verify direct route rewrites in `vercel.json` before publication.
-- [ ] T049 Commit implementation increments using Conventional Commit prefixes (`feat:`, `fix:`, `docs:`, `refactor:`, `test:`, `chore:`) and merge/deploy only from the primary branch after tests and lint pass.
+- [X] T049 Create a Conventional Commit for the implementation using an approved prefix and keep any merge/deploy on the primary branch after tests and lint pass.
 
 ---
 
