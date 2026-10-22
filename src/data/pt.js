@@ -1,0 +1,12 @@
+export default {
+  resume: null,
+  languageName: 'Português',
+  nav: { about: 'Sobre', projects: 'Projetos', trajectory: 'Trajetória', language: 'Mudar idioma', theme: 'Alternar tema', themeLight: 'Ativar tema claro', themeDark: 'Ativar tema escuro' },
+  hero: { eyebrow: 'ESTUDANTE · DESENVOLVIMENTO', title: 'Construindo meu próximo capítulo.', description: 'Sou estudante de Engenharia de Software na FIAP e busco minha primeira oportunidade ou estágio em desenvolvimento Front-End, Back-End ou Full Stack.', resume: 'Baixar currículo', projects: 'Ver projetos', badge: 'Retrato de Andrey Durante' },
+  showcase: { eyebrow: 'TRABALHOS & FERRAMENTAS', title: 'O que estou construindo', projects: 'Projetos', technologies: 'Tecnologias', competencies: 'Competências', loading: 'Carregando projetos…', empty: 'Ainda não há projetos selecionados para exibir.', error: 'Não foi possível carregar os projetos agora.', details: 'Detalhes', online: 'Ver online', noDescription: 'Projeto em desenvolvimento.', stale: 'Exibindo os últimos dados disponíveis.' },
+  skills: { technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js', 'Python', 'Tailwind CSS', 'UX/UI'], competencies: ['Trabalho em equipe', 'Comunicação clara', 'Adaptabilidade', 'Comprometimento com prazos'] },
+  trajectory: { eyebrow: 'CAMINHO ATÉ AQUI', title: 'Trajetória', resume: 'Baixar currículo', items: [{ title: 'Engenharia de Software', organization: 'FIAP', type: 'Formação' }, { title: 'Técnico em TI', organization: 'Formação técnica', type: 'Formação' }, { title: 'Assistente Operacional', organization: 'Adalta Engenharia', type: 'Experiência' }] },
+  footer: { label: 'Vamos conversar', email: 'E-mail', github: 'GitHub', linkedin: 'LinkedIn', rights: 'Feito com intenção.' },
+  details: { back: 'Voltar aos projetos', loading: 'Carregando documentação…', missing: 'Este projeto ainda não possui um README disponível.', error: 'Não foi possível carregar a documentação.', stale: 'Exibindo a última versão disponível.' },
+  notFound: { title: 'Página não encontrada', description: 'O endereço pode estar incorreto ou não existir.', home: 'Voltar ao início' },
+}
