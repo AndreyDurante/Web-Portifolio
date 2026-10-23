@@ -6,7 +6,13 @@ import { LanguageProvider } from '../../src/contexts/LanguageContext.jsx'
 
 describe('NotFoundPage', () => {
   it('offers a localized route home', () => {
-    render(<MemoryRouter><LanguageProvider><NotFoundPage /></LanguageProvider></MemoryRouter>)
+    render(
+      <MemoryRouter>
+        <LanguageProvider>
+          <NotFoundPage />
+        </LanguageProvider>
+      </MemoryRouter>,
+    )
     expect(screen.getByRole('heading', { name: 'Página não encontrada' })).toBeInTheDocument()
     expect(screen.getByRole('link', { name: 'Voltar ao início' })).toHaveAttribute('href', '/')
   })

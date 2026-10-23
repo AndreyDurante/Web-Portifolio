@@ -7,7 +7,15 @@ import { ThemeProvider } from '../../src/contexts/ThemeContext.jsx'
 
 describe('Navigation preferences', () => {
   it('provides language and theme controls', () => {
-    render(<MemoryRouter><LanguageProvider><ThemeProvider><Navigation /></ThemeProvider></LanguageProvider></MemoryRouter>)
+    render(
+      <MemoryRouter>
+        <LanguageProvider>
+          <ThemeProvider>
+            <Navigation />
+          </ThemeProvider>
+        </LanguageProvider>
+      </MemoryRouter>,
+    )
     fireEvent.click(screen.getByRole('button', { name: 'Mudar idioma' }))
     expect(document.documentElement.lang).toBe('en')
     fireEvent.click(screen.getByRole('button', { name: 'Switch to light theme' }))

@@ -5,4 +5,12 @@ import { ThemeProvider } from './contexts/ThemeContext.jsx'
 import App from './App.jsx'
 import './index.css'
 
-createRoot(document.getElementById('root')).render(<StrictMode><LanguageProvider><ThemeProvider><App /></ThemeProvider></LanguageProvider></StrictMode>)
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <LanguageProvider>
+      <ThemeProvider>
+        <App />
+      </ThemeProvider>
+    </LanguageProvider>
+  </StrictMode>,
+)
