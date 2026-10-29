@@ -17,7 +17,12 @@ export default {
       'Sou estudante de Engenharia de Software na FIAP e busco minha primeira oportunidade ou estágio em desenvolvimento Front-End, Back-End ou Full Stack.',
     resume: 'Baixar currículo',
     projects: 'Ver projetos',
-    badge: 'Retrato de Andrey Durante',
+    badge: 'Crachá interativo de Andrey Durante',
+    badgeField: 'Desenvolvimento de Software',
+    badgeDegree: 'Engenharia de Software',
+    badgePortfolio: 'Portfólio',
+    badgePhotoLabel: 'Sua foto',
+    badgeMoveHelp: 'Arraste o crachá ou use as setas do teclado para movê-lo.',
   },
   showcase: {
     eyebrow: 'TRABALHOS & FERRAMENTAS',

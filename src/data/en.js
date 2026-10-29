@@ -17,7 +17,12 @@ export default {
       'I am a Software Engineering student at FIAP seeking my first development role or internship in Front-End, Back-End, or Full Stack.',
     resume: 'Download résumé',
     projects: 'View projects',
-    badge: 'Portrait of Andrey Durante',
+    badge: 'Interactive badge for Andrey Durante',
+    badgeField: 'Software Development',
+    badgeDegree: 'Software Engineering',
+    badgePortfolio: 'Portfolio',
+    badgePhotoLabel: 'Your photo',
+    badgeMoveHelp: 'Drag the badge or use the arrow keys to move it.',
   },
   showcase: {
     eyebrow: 'WORK & TOOLS',
