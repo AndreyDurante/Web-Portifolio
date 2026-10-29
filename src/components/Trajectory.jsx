@@ -1,4 +1,5 @@
 import { useLanguage } from '../hooks/useLanguage.js'
+import ScrollReveal from './ScrollReveal.jsx'
 
 export default function Trajectory() {
   const { t, language } = useLanguage()
@@ -18,27 +19,39 @@ export default function Trajectory() {
 
           return (
             <section key={column.key} aria-labelledby={`trajectory-${column.key}`}>
-              <h3
+              <ScrollReveal
+                as="h3"
                 id={`trajectory-${column.key}`}
-                className="mb-5 text-center font-mono text-xs uppercase tracking-[.18em] accent"
+                className="scroll-reveal mb-5 text-center font-mono text-xs uppercase tracking-[.18em] accent"
               >
                 {column.title}
-              </h3>
+              </ScrollReveal>
               <div className="grid content-start gap-4">
                 {items.map((item) => (
-                  <article
+                  <ScrollReveal
+                    as="article"
                     key={`${item.title}-${item.organization}`}
-                    className="surface grid gap-3 rounded-2xl border border-token p-5 sm:grid-cols-[4rem_1fr_auto] sm:items-center sm:p-7"
+                    variant="block"
+                    delay={(item.index % 4) * 90}
+                    className="scroll-reveal surface grid gap-3 rounded-2xl border border-token p-5 sm:grid-cols-[4rem_1fr_auto] sm:items-center sm:p-7"
                   >
                     <span className="font-mono text-xs accent">
                       {String(item.index + 1).padStart(2, '0')}
                     </span>
                     <div>
-                      <h4 className="text-xl font-bold">{item.title}</h4>
-                      <p className="mt-1 text-sm text-muted">{item.organization}</p>
+                      <ScrollReveal as="h4" className="scroll-reveal text-xl font-bold">
+                        {item.title}
+                      </ScrollReveal>
+                      <ScrollReveal
+                        as="p"
+                        className="scroll-reveal mt-1 text-sm text-muted"
+                        delay={80}
+                      >
+                        {item.organization}
+                      </ScrollReveal>
                     </div>
                     <span className="hidden h-2 w-2 rounded-full bg-[var(--accent)] sm:block" />
-                  </article>
+                  </ScrollReveal>
                 ))}
               </div>
             </section>

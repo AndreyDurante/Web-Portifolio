@@ -9,6 +9,8 @@ import {
   siTailwindcss,
 } from 'simple-icons'
 
+import ScrollReveal from './ScrollReveal.jsx'
+
 const technologyIcons = {
   HTML: siHtml5,
   CSS: siCss,
@@ -24,13 +26,16 @@ export default function SkillList({ items, showIcons = false }) {
   if (showIcons) {
     return (
       <ul className="mx-auto flex max-w-5xl flex-wrap justify-center gap-3">
-        {items.map((item) => {
+        {items.map((item, index) => {
           const icon = technologyIcons[item]
 
           return (
-            <li
+            <ScrollReveal
+              as="li"
+              variant="block"
               key={item}
-              className="surface flex min-h-28 min-w-28 flex-col items-center justify-center gap-3 rounded-2xl border border-token px-4 py-4 text-sm"
+              className="scroll-reveal surface flex min-h-28 min-w-28 flex-col items-center justify-center gap-3 rounded-2xl border border-token px-4 py-4 text-sm"
+              delay={(index % 6) * 60}
             >
               {icon && (
                 <svg
@@ -43,7 +48,7 @@ export default function SkillList({ items, showIcons = false }) {
                 </svg>
               )}
               <span>{item}</span>
-            </li>
+            </ScrollReveal>
           )
         })}
       </ul>
@@ -52,10 +57,16 @@ export default function SkillList({ items, showIcons = false }) {
 
   return (
     <ul className="mx-auto flex max-w-5xl flex-wrap justify-center gap-3">
-      {items.map((item) => (
-        <li key={item} className="surface rounded-full border border-token px-5 py-3 text-sm">
+      {items.map((item, index) => (
+        <ScrollReveal
+          as="li"
+          variant="block"
+          key={item}
+          className="scroll-reveal surface rounded-full border border-token px-5 py-3 text-sm"
+          delay={(index % 6) * 60}
+        >
           {item}
-        </li>
+        </ScrollReveal>
       ))}
     </ul>
   )
