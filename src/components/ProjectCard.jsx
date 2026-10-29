@@ -35,7 +35,7 @@ export default function ProjectCard({ project }) {
       </p>
       <div className="mt-6 flex flex-wrap justify-center gap-3">
         <Link
-          className="inline-flex min-h-10 items-center rounded-full bg-[var(--foreground)] px-4 font-mono text-[10px] uppercase tracking-wider text-[var(--background)]"
+          className="project-card-details inline-flex min-h-10 items-center rounded-full px-4 font-mono text-[10px] uppercase tracking-wider transition-colors"
           to={`/projetos/${encodeURIComponent(project.name)}`}
         >
           {t.showcase.details}
