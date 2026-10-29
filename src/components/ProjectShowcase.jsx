@@ -24,8 +24,8 @@ export default function ProjectShowcase() {
         </p>
       )}
       <div className="mx-auto grid max-w-5xl gap-4 md:grid-cols-2">
-        {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+        {projects.map((project, index) => (
+          <ProjectCard key={project.id} project={project} delay={(index % 4) * 200} />
         ))}
       </div>
     </div>

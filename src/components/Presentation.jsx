@@ -1,5 +1,6 @@
 import { useLanguage } from '../hooks/useLanguage.js'
 import ProfileBadge from './ProfileBadge.jsx'
+import ScrollReveal from './ScrollReveal.jsx'
 
 export default function Presentation() {
   const { t, language } = useLanguage()
@@ -9,14 +10,26 @@ export default function Presentation() {
       id="sobre"
       className="site-shell grid min-h-[90svh] items-center gap-12 pb-16 pt-28 md:grid-cols-[1.2fr_.8fr] md:pt-32"
     >
-      <div className="order-2 md:order-1">
-        <p className="font-mono text-xs uppercase tracking-[.22em] accent">{t.hero.eyebrow}</p>
-        <h1 className="mt-6 max-w-3xl text-5xl font-black leading-[.98] tracking-[-.06em] sm:text-6xl md:text-7xl">
+      <div className="hero-copy-enter order-2 md:order-1">
+        <ScrollReveal
+          as="p"
+          className="scroll-reveal font-mono text-xs uppercase tracking-[.22em] accent"
+        >
+          {t.hero.eyebrow}
+        </ScrollReveal>
+        <ScrollReveal
+          as="h1"
+          className="scroll-reveal mt-6 max-w-3xl text-5xl font-black leading-[.98] tracking-[-.06em] sm:text-6xl md:text-7xl"
+        >
           {t.hero.title}
-        </h1>
-        <p className="mt-7 max-w-xl text-base leading-7 text-muted md:text-lg md:leading-8">
+        </ScrollReveal>
+        <ScrollReveal
+          as="p"
+          className="scroll-reveal mt-7 max-w-xl text-base leading-7 text-muted md:text-lg md:leading-8"
+          delay={110}
+        >
           {t.hero.description}
-        </p>
+        </ScrollReveal>
         <div className="mt-9 flex flex-wrap gap-3">
           {t.resume && (
             <a
@@ -40,11 +53,15 @@ export default function Presentation() {
             </span>
           </a>
         </div>
-        <p className="mt-10 font-mono text-[10px] uppercase tracking-[.2em] text-muted">
+        <ScrollReveal
+          as="p"
+          className="scroll-reveal mt-10 font-mono text-[10px] uppercase tracking-[.2em] text-muted"
+          delay={180}
+        >
           FIAP <span className="mx-2 accent">/</span> Engenharia de Software
-        </p>
+        </ScrollReveal>
       </div>
-      <div className="order-1 mx-auto w-full max-w-[19rem] md:order-2 md:max-w-[24rem]">
+      <div className="hero-visual-enter order-1 mx-auto w-full max-w-[19rem] md:order-2 md:max-w-[24rem]">
         <ProfileBadge alt={t.hero.badge} />
       </div>
     </section>

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import Card from './Card.jsx'
 import { useLanguage } from '../hooks/useLanguage.js'
 import images from '../data/projectImages.js'
+import ScrollReveal from './ScrollReveal.jsx'
 
 function safeHomepage(value) {
   try {
@@ -12,12 +13,15 @@ function safeHomepage(value) {
   }
 }
 
-export default function ProjectCard({ project }) {
+export default function ProjectCard({ project, delay = 0 }) {
   const { t } = useLanguage()
   const homepage = safeHomepage(project.homepage)
   const image = images[project.name]
   return (
-    <Card className="group flex min-h-64 flex-col items-center overflow-hidden p-6 text-center transition hover:-translate-y-1 hover:border-[var(--accent)]">
+    <Card
+      delay={delay}
+      className="group flex min-h-64 flex-col items-center overflow-hidden p-6 text-center transition hover:-translate-y-1 hover:border-[var(--accent)]"
+    >
       {image && (
         <img
           src={image}
@@ -28,11 +32,26 @@ export default function ProjectCard({ project }) {
           className="mb-5 aspect-video w-full rounded-xl object-cover"
         />
       )}
-      <p className="font-mono text-[10px] uppercase tracking-[.2em] accent">{project.name}</p>
-      <h3 className="mt-3 break-words text-2xl font-bold tracking-tight">{project.name}</h3>
-      <p className="mt-2 flex-1 text-sm leading-6 text-muted">
+      <ScrollReveal
+        as="p"
+        className="scroll-reveal font-mono text-[10px] uppercase tracking-[.2em] accent"
+      >
+        {project.name}
+      </ScrollReveal>
+      <ScrollReveal
+        as="h3"
+        className="scroll-reveal mt-3 break-words text-2xl font-bold tracking-tight"
+        delay={80}
+      >
+        {project.name}
+      </ScrollReveal>
+      <ScrollReveal
+        as="p"
+        className="scroll-reveal mt-2 flex-1 text-sm leading-6 text-muted"
+        delay={150}
+      >
         {project.description || t.showcase.noDescription}
-      </p>
+      </ScrollReveal>
       <div className="mt-6 flex flex-wrap justify-center gap-3">
         <Link
           className="project-card-details inline-flex min-h-10 items-center rounded-full px-4 font-mono text-[10px] uppercase tracking-wider transition-colors"
