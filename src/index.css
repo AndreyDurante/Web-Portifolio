@@ -255,6 +255,47 @@ a {
 .hero-visual-enter {
   animation: hero-visual-enter 1050ms cubic-bezier(0.16, 1, 0.3, 1) 180ms both;
 }
+.badge-scene {
+  perspective: 1100px;
+  touch-action: pan-y;
+}
+.badge-card {
+  cursor: grab;
+  touch-action: pan-y;
+  transform:
+    translate3d(var(--badge-x, 0px), var(--badge-y, 0px), 0)
+    rotateX(var(--badge-rotate-x, 0deg))
+    rotateY(var(--badge-rotate-y, 0deg));
+  transform-style: preserve-3d;
+  transition: transform 950ms cubic-bezier(0.22, 1.35, 0.36, 1);
+  user-select: none;
+  -webkit-user-select: none;
+}
+.badge-card[data-dragging='true'] {
+  z-index: 5;
+  cursor: grabbing;
+  transition: none;
+}
+.badge-card:focus-visible {
+  outline: none;
+}
+.badge-card-face {
+  box-shadow: 0 24px 48px -18px color-mix(in srgb, var(--foreground) 55%, transparent);
+  transform: translateZ(7px);
+  backface-visibility: hidden;
+}
+.badge-photo-slot {
+  background:
+    linear-gradient(145deg, color-mix(in srgb, var(--accent) 9%, transparent), transparent 72%),
+    color-mix(in srgb, var(--line) 36%, var(--surface));
+  box-shadow: inset 0 1px 6px color-mix(in srgb, var(--foreground) 8%, transparent);
+}
+.badge-photo-placeholder {
+  color: color-mix(in srgb, var(--muted) 72%, transparent);
+}
+.badge-card-edge {
+  transform: translateZ(-4px);
+}
 @keyframes hero-copy-enter {
   from {
     opacity: 0;
@@ -365,6 +406,9 @@ a {
   .hero-copy-enter,
   .hero-visual-enter {
     animation: none;
+  }
+  .badge-card {
+    transition-duration: 180ms;
   }
 }
 @media (max-width: 640px) {

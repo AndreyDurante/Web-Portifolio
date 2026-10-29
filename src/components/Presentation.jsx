@@ -62,7 +62,14 @@ export default function Presentation() {
         </ScrollReveal>
       </div>
       <div className="hero-visual-enter order-1 mx-auto w-full max-w-[19rem] md:order-2 md:max-w-[24rem]">
-        <ProfileBadge alt={t.hero.badge} />
+        <ProfileBadge
+          ariaLabel={t.hero.badge}
+          fieldLabel={t.hero.badgeField}
+          degreeLabel={t.hero.badgeDegree}
+          portfolioLabel={t.hero.badgePortfolio}
+          photoLabel={t.hero.badgePhotoLabel}
+          moveHelp={t.hero.badgeMoveHelp}
+        />
       </div>
     </section>
   )
