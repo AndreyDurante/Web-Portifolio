@@ -222,6 +222,14 @@ a {
 .border-token {
   border-color: var(--line);
 }
+.project-card-details {
+  background-color: var(--foreground);
+  color: var(--background);
+}
+.project-card-details:hover {
+  background-color: var(--accent);
+  color: var(--background);
+}
 .accent {
   color: var(--accent);
 }
