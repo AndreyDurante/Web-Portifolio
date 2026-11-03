@@ -1,6 +1,12 @@
 import ScrollReveal from './ScrollReveal.jsx'
 
-export default function Card({ as: Tag = 'article', className = '', children, delay = 0, ...props }) {
+export default function Card({
+  as: Tag = 'article',
+  className = '',
+  children,
+  delay = 0,
+  ...props
+}) {
   return (
     <ScrollReveal
       as={Tag}
